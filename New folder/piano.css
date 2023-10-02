@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+.key{
+    color: black;
+    font-size: 200%;
+    font-weight: bolder;
+    list-style-type: auto;
+    justify-content: left;
+    position: relative;
+    bottom: 70px;
+
+}
+
+.key kbd{
+    list-style: none;
+    overflow: auto;
+    justify-content: center;
+    float: left;
+    padding-right: 52px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>piano</title>
+    <link rel="stylesheet" href="piano.css">
+</head>
+<>
+    <div class="main">
+        <img src="piano.jpeg" alt="error">
+        <div class="keys">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+            </div>
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+            </div>
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+            </div>
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+            </div>
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+            </div>
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+            </div>
+            <div data-key="76" class="key">
+                <kbd>L</kbd>
+            </div>
+            <div data-key="90" class="key">
+                <kbd>Z</kbd>
+            </div>
+            <div data-key="88" class="key">
+                <kbd>X</kbd>
+            </div>
+            <div data-key="67" class="key">
+                <kbd>C</kbd>
+            </div>
+            <div data-key="86" class="key">
+                <kbd>V</kbd>
+            </div>
+            <div data-key="66" class="key">
+                <kbd>B</kbd>
+            </div>
+            <div data-key="78" class="key">
+                <kbd>N</kbd>
+            </div>
+            <div data-key="77" class="key">
+                <kbd>M</kbd>
+            </div>
+            <div data-key="60" class="key">
+                <kbd>E</kbd>
+            </div>
+            <div data-key="82" class="key">
+                <kbd>R</kbd>
+            </div>
+            <div data-key="84" class="key">
+                <kbd>T</kbd>
+            </div>
+        </div>
+    </div>
+
+    <audio data-key="65" src="24 sound/key01.mp3"></audio>
+    <audio data-key="83" src="24 sound/key02.mp3"></audio>
+    <audio data-key="68" src="24 sound/key03.mp3"></audio>
+    <audio data-key="70" src="24 sound/key04.mp3"></audio>
+    <audio data-key="71" src="24 sound/key05.mp3"></audio>
+    <audio data-key="72" src="24 sound/key06.mp3"></audio>
+    <audio data-key="74" src="24 sound/key07.mp3"></audio>
+    <audio data-key="75" src="24 sound/key08.mp3"></audio>
+    <audio data-key="76" src="24 sound/key09.mp3"></audio>
+    <audio data-key="90" src="24 sound/key10.mp3"></audio>
+    <audio data-key="88" src="24 sound/key11.mp3"></audio>
+    <audio data-key="67" src="24 sound/key12.mp3"></audio>
+    <audio data-key="86" src="24 sound/key13.mp3"></audio>
+    <audio data-key="66" src="24 sound/key14.mp3"></audio>
+    <audio data-key="78" src="24 sound/key15.mp3"></audio>
+    <audio data-key="77" src="24 sound/key16.mp3"></audio>
+    <audio data-key="69" src="24 sound/key17.mp3"></audio>
+    <audio data-key="82" src="24 sound/key18.mp3"></audio>
+    <audio data-key="84" src="24 sound/key19.mp3"></audio>
+</body>
+<script>
+    window.addEventListener('keydown',function(e){
+       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+       if(!audio) return;
+        audio.currentTime = 0;
+       audio.play()
+
+    })
+</script>
+</html>
